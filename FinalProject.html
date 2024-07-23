@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        background-color: blanchedalmond;
+        align-items: center;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        z-index: 99;
+      }
+      .nav-kolom1 {
+        display: flex;
+        align-items: center;
+        padding-left: 100px;
+        color: rgb(0, 4, 16);
+      }
+      .nav-kolom1 h3 {
+        font-family: Times, "Times New Roman", serif;
+      }
+      .nav-kolom3 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-right: 100px;
+        color: rgb(14, 0, 0);
+      }
+      .navlink {
+        text-decoration: none;
+        color: black;
+      }
+      .navlink:hover {
+        text-decoration: underline;
+      }
+      .navlink:active {
+        text-decoration: underline;
+      }
+      .header img {
+        width: 100%;
+        height: 600px;
+      }
+      .main1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+        margin-top: 25px;
+      }
+      .main1-konten1 {
+        width: 40%;
+        height: 500px;
+        background-image: url(bags.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 10px;
+      }
+      .main1-konten1:hover {
+        transform: scale(1.02);
+        transition: 0.5s;
+      }
+      .main1-konten2 {
+        width: 40%;
+        height: 500px;
+        background-image: url(shoes.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 10px;
+      }
+      .main1-konten2:hover {
+        transform: scale(1.02);
+        transition: 0.5s;
+      }
+      .main12 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+        margin-top: 25px;
+      }
+      .main12-konten1 {
+        width: 40%;
+        height: 500px;
+        background-image: url(Apparel.jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 10px;
+      }
+      .main12-konten1:hover {
+        transform: scale(1.02);
+        transition: 0.5s;
+      }
+      .main12-konten2 {
+        width: 40%;
+        height: 500px;
+        background-image: url(Accescories.jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 10px;
+      }
+      .main12-konten2:hover {
+        transform: scale(1.02);
+        transition: 0.5s;
+      }
+      .main13 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+        margin-top: 25px;
+      }
+      .main13-konten1 {
+        width: 40%;
+        height: 500px;
+        background-image: url(lifestyle.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .main13-konten1:hover {
+        transform: scale(1.02);
+        transition: 0.5s;
+      }
+      .main13-konten2 {
+        width: 40%;
+        height: 500px;
+        background-image: url(tech.jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .main13-konten2:hover {
+        transform: scale(1.02);
+        transition: 0.5s;
+      }
+      .section2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-items: center;
+        padding-left: 300px;
+        padding-right: 300px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: blanchedalmond;
+        color: black;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        margin-top: 50px;
+      }
+      footer {
+        background-color: rgb(236, 222, 197);
+        color: black;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 200px;
+      }
+      .footer-bottom {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        background-color: rgb(222, 205, 175);
+      }
+      .bar {
+        display: none;
+      }
+
+      @media only screen and (max-width: 663px) {
+        .nav {
+          justify-content: space-between;
+          padding-right: 20px;
+        }
+        .nav-kolom1 {
+          padding-left: 20px;
+        }
+        .nav-kolom3 {
+          display: none;
+        }
+        .bar {
+          display: inline;
+        }
+        .bar-hover {
+          display: none;
+        }
+        .bar-hover a {
+          text-decoration: none;
+          color: black;
+        }
+        .kontenbar:hover .bar-hover {
+          display: block;
+          position: absolute;
+          margin-left: -75px;
+          margin-top: 20px;
+          background-color: white;
+          padding: 20px;
+        }
+
+        .main1 {
+          flex-direction: column;
+        }
+        .main1-konten1 {
+          flex-direction: column;
+          width: 90%;
+        }
+        .main1-konten2 {
+          width: 90%;
+        }
+        .main12 {
+          flex-direction: column;
+        }
+        .main12-konten1 {
+          flex-direction: column;
+          width: 90%;
+        }
+        .main12-konten2 {
+          width: 90%;
+        }
+        .main13 {
+          flex-direction: column;
+        }
+        .main13-konten1 {
+          flex-direction: column;
+          width: 80%;
+        }
+        .main13-konten2 {
+          width: 80%;
+        }
+        .header {
+          width: 100%;
+        }
+        .section2 {
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-bottom: 20px;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          padding-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="nav-kolom1">
+        <h3>Salwa's Choice</h3>
+        <i class="fa-solid fa-arrow-trend-up"></i>
+      </div>
+      <div class="nav-kolom3">
+        <div>
+          <a href="/Meeting 14/bags.html" class="navlink">Bags</a>
+        </div>
+        <div>
+          <a href="/Meeting 15/Footwear.html" class="navlink">Footwear</a>
+        </div>
+        <div>
+          <a href="/Meeting 16/Apparel.html" class="navlink">Apparel</a>
+        </div>
+        <div>
+          <a href="/Meeting 17/Accessories.html" class="navlink">Accessories</a>
+        </div>
+        <div>
+          <a href="/Meeting 19/loginpage.html" class="navlink"
+            ><i class="fa-solid fa-user"></i
+          ></a>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="kontenbar">
+          <a href=""><i class="fa-solid fa-bars"></i></a>
+          <div class="bar-hover">
+            <a href="/Meeting 14/bags.html">Bags</a>
+            <a href="/Meeting 15/Footwear.html">Footwear</a>
+            <a href="/Meeting 16/Apparel.html">Apparel</a>
+            <a href="/Meeting 17/Accessories.html">Accessories</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <img src="header3.jpg" alt="" />
+    </div>
+    <div style="text-align: center; margin-top: 50px">
+      <h1>Featured</h1>
+    </div>
+    <div class="main1">
+      <div class="main1-konten1">
+        <a
+          href="/Meeting 14/bags.html"
+          style="color: white; text-decoration: none"
+        >
+          <h1>Bags</h1>
+        </a>
+      </div>
+      <div class="main1-konten2">
+        <a
+          href="/Meeting 15/Footwear.html"
+          style="color: white; text-decoration: none"
+        >
+          <h1>Footwear</h1>
+        </a>
+      </div>
+    </div>
+    <div class="main12">
+      <div class="main12-konten1">
+        <div style="width: 300px; text-align: center">
+          <a
+            href="/Meeting 16/Apparel.html"
+            style="color: white; text-decoration: none"
+          >
+            <h1>Apparel</h1>
+          </a>
+        </div>
+      </div>
+      <div class="main12-konten2">
+        <a
+          href="/Meeting 17/Accessories.html"
+          style="color: white; text-decoration: none"
+        >
+          <h1>Accessories</h1>
+        </a>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 50px">
+      <h1>More</h1>
+    </div>
+    <div class="main13">
+      <div class="main13-konten1">
+        <a
+          href="/Meeting 18/News1.html"
+          style="text-decoration: none; color: white"
+        >
+          <h2>
+            Lebih Utamakan Kenyamanan, Ini 5 Tren Fashion Paling Populer
+            Sepanjang 2024
+          </h2>
+          <br />
+          <h3>By Della Medina</h3>
+        </a>
+      </div>
+      <div class="main13-konten2">
+        <a
+          href="/Meeting 18/News2.html"
+          style="text-decoration: none; color: white"
+        >
+          <h2>
+            Deretan Fashion Item Terbaru yang Sedang Jadi Tren di Korea Saat
+            Ini!
+          </h2>
+          <br />
+          <h3>By Nerissa Arviana</h3>
+        </a>
+      </div>
+    </div>
+    <div class="section2">
+      <div>
+        <h1>Salwa's Choice <i class="fa-solid fa-arrow-trend-up"></i></h1>
+        <br />
+        <h2>
+          Hello, We are Salwa's Choice ! Salwa's Choice has become a main point
+          for fashion and lifestyle from international brands. Salwa's Choice is
+          a place for curated local and international products in order to
+          support you achieving your own fashion choice.
+        </h2>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <h2 style="margin-bottom: 10px; margin-left: 20px">Follow Us</h2>
+        <i class="fa-brands fa-instagram fa-xl" style="margin-left: 15px"></i>
+        <i
+          class="fa-brands fa-tiktok fa-xl"
+          style="margin-left: 20px; margin-right: 20px"
+        ></i>
+        <i class="fa-brands fa-x-twitter fa-xl"></i>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      <p>@2024-PT Salwa.ALL RIGHTS RESERVED</p>
+      <p>Syarat & Ketentuan</p>
+      <p>Kebijakan Privasi</p>
+    </div>
+  </body>
+</html>
